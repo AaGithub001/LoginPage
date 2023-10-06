@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import Home from '../pages/Home';
 
-function Login() {
+function LoginPage() {
 const[username, setUsername] = useState ("");
 const[password, setPassword] = useState("");
 const [valid, setValid] = useState(false);
@@ -12,11 +11,10 @@ const handleSubmit =() =>{
 
 
 
-  return (
+return (
     
-        valid ? <Home/>:
     
-        <div>
+    <div>
             <form>
             <labell>Login Name </labell>
             <input type="text" value={username} onChange={(e)=>setUsername(e.target.value)}/>
@@ -26,10 +24,9 @@ const handleSubmit =() =>{
 
                
             </form>
-       </div>
-    
+    </div>
   )
   
 }
 
-export default Login
+export default LoginPage
